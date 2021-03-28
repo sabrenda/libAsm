@@ -11,5 +11,4 @@ NASM (Netwide Assembler) — свободный ассемблер для арх
 Сабжект проекта: en.subject.pdf
 
 Компилирование файлов .s с флагами: nasm -f macho64
-
 Компилирование файлов .c с флагами: gcc -Wall -Wextra -Werror
