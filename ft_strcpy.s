@@ -12,5 +12,7 @@ _ft_strcpy:
 		inc rax
 		jmp .loop
 .return:
+		mov dl, byte[rsi + rax]
+		mov byte[rdi + rax], dl
 		mov rax, rdi
 		ret

@@ -8,7 +8,7 @@ _ft_write:
 		mov rax, 0x2000004
 		syscall
 		jc .error
-		jmp .return
+		ret
 
 .error:
 		push r8
@@ -17,8 +17,4 @@ _ft_write:
 		mov [rax], r8
 		pop r8
 		mov rax, -1
-		ret
-
-.return:
-		mov rax, r8
 		ret

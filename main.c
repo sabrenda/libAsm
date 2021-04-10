@@ -1,40 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sabrenda <sabrenda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/01 19:57:09 by sabrenda          #+#    #+#             */
+/*   Updated: 2021/04/01 20:09:03 by sabrenda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "libasm.h"
 
-static	void	more_tests(void)
+void	more_tests(void)
 {
-	char str1[50];
-	char str2[50];
+	char	str1[50];
+	char	str2[50];
 
 	printf("\n");
-	printf("strlen: %zu\n", strlen("123456789012"));
-	printf("ft_strlen: %zu\n", ft_strlen("123456789012"));
+	printf("strlen: %zu\n", strlen("daadfdfddfaffdffadf"));
+	printf("ft_strlen: %zu\n", ft_strlen("daadfdfddfaffdffadf"));
 	printf("\n");
-	printf("strcpy: %s\n", strcpy(str1, "Hello world!\0"));
-	printf("ft_strcpy: %s\n", ft_strcpy(str2, "Hello world!\0"));
+	printf("strcpy: %s\n", strcpy(str1, "range , typically a neat one"));
+	printf("ft_strcpy: %s\n", ft_strcpy(str2, "range , typically a neat one"));
 	printf("\n");
-	printf("strcmp: %d\n", strcmp("sxdcfvb", "rty"));
-	printf("ft_strcmp: %d\n", ft_strcmp("sxdcfvb", "rty"));
+	printf("strcmp: %d\n", strcmp("asdfghjkl", "qwee"));
+	printf("ft_strcmp: %d\n", ft_strcmp("asdfghjkl", "qwee"));
 	printf("\n");
-	write(-1, "IT IS WRITE\n", strlen("IT IS WRITE\n"));
-	ft_write(-1, "IT IS WRITE\n", strlen("IT IS WRITE\n"));
+	write(-1, "IT IS WRIIIIITE\n", strlen("IT IS WRIIIIITE\n"));
+	ft_write(-1, "IT IS WRIIIIITE\n", strlen("IT IS WRIIIIITE\n"));
 	printf("\n");
 	printf("Error write: %zd",
-			write(-1, "IT IS WRITE\n", strlen("IT IS WRITE\n")));
+	write(-1, "IT IS WRIIIIITE\n", strlen("IT IS WRIIIIITE\n")));
 	printf("\n");
 	printf("Error ft_write: %zd",
-			ft_write(-1, "IT IS WRITE\n", strlen("IT IS WRITE\n")));
+	ft_write(-1, "IT IS WRIIIIITE\n", strlen("IT IS WRIIIIITE\n")));
 	printf("\n");
 }
 
-int	main(void)
+int		main(void)
 {
-	char str3[6];
-	char str4[6];
-	char *str5;
-	char *str6;
+	char	str3[6];
+	char	str4[6];
+	char	*str5;
+	char	*str6;
 
 	more_tests();
 	printf("\n");
@@ -50,7 +62,7 @@ int	main(void)
 	printf("%s", str3);
 	printf("Error read: %zd\n", read(-1, str4, 10));
 	printf("\n");
-	printf("strdup: %s\n", str5 = strdup("I AM HERE and you!"));
-	printf("ft_strdup: %s\n", str6 = ft_strdup("I AM HERE and you!"));
+	printf("strdup: %s\n", str5 = strdup("lalala"));
+	printf("ft_strdup: %s\n", str6 = ft_strdup("lalala"));
 	return (0);
 }
